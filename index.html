@@ -1,0 +1,35 @@
+  <!DOCTYPE html>  <!--document type html-->
+  <html>  <!--html start-->
+      <head> <!--head start-->
+  <!-- Import our css styles -->
+  <link rel="stylesheet" href="./style/style.css">
+      </head> <!--head end-->
+      <body> <!--body start-->
+
+<section class="topcontend"> <!--section start with a class-->
+    <div class="topcontainer"> <!--div start with a class-->
+      <h1 class="heading">Weather App - CA2 &#9968;</h1> <!--h1 heading with a class and mountion symbol-->
+      <form> <!--form start-->
+        <!--user input (text/search area), adding place holder text, alert the user if the text area is empty-->
+        <input type="text" placeholder="Search for a city" autofocus oninvalid="alert('You must enter a place !!');" required>
+        <button type="submit">SUBMIT</button> <!--submit button-->
+        <span class="message"></span> <!--span with a class-->
+      </form> <!--form end-->
+    </div> <!--div end-->
+  </section> <!--section end-->
+  <section class="weathersection"> <!-- ajax section-->
+    <div class="datacontainer"> <!--start div with class-->
+      <ul class="cities"></ul> <!--universal list with a class-->
+    </div> <!--end div-->
+  </section> <!--end section-->
+  <!-- Import our javascript file -->
+<script src="./script/app.js"></script>
+</body> <!--end body-->
+  <footer class="footer"> <!--start footer-->
+    <div class="container"> <!--div start with class-->
+      <!--footer with copy symbol, class, heart symbole and my name and student id-->
+      <small>&copy; 2020 made with<span class="heartSymbel">&#10084; </span>by Akhil Chandran - 2017219</small>
+    </div> <!--end div-->
+  </footer> <!--end footer-->
+  </html> <!--end html-->
+  

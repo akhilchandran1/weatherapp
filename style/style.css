@@ -1,0 +1,275 @@
+
+/*
+CSS designing
+*/
+
+:root { /* making root colors */
+  --orange: #ff6600;
+  --lightdarkfontcolor: #3d5070;
+  --darkfontcolor: #041333;
+  --darkbg: #012631; 
+  --countrybg: #5cc505;
+  --fontcolourwhite: #fff;
+  --green: #7ab906;
+}
+/*
+start(*) is a universal selector.(select all elements)
+this will applicable in all browsers. 
+*/
+* {
+  margin: 0; /* specifying margin */
+  padding: 0; /* specifying padding */
+  box-sizing: border-box;  /* specifying box size*/
+  font-weight: normal; /* specifying font weight */
+}
+
+button { /* button*/
+  
+  display: inline-block; /* specifying display */
+  border-radius: 4px; /* specifying border radius */
+  border: none; /* specifying border is none*/
+  color: #FFFFFF; /* specifying color */
+  text-align: center; /* specifying text align */
+  font-size: 28px; /* specifying font size */
+  padding: 20px; /* specifying padding */
+  width: 250px; /* specifying width */
+  height: 50px; /* specifying height*/
+  transition: all 0.5s; /* specifying transition */
+  cursor: pointer; /* specifying cursor */
+  margin: 5px; /* specifying margin */
+  font-family: Arial, Helvetica, sans-serif; /* specifying font */
+  letter-spacing: 1.5px; /* specifying letter spacing */
+}
+ 
+input { /* input */
+  -webkit-appearance: none; /* specifying no webkit Appearance to give different design */
+}
+ 
+input[type=text] { /* imput with type text */
+  border: none; /* specifying border is none */
+  color: inherit; /* specifying color */
+  letter-spacing: 1.5px; /* specifying letter spacing */
+  background: none; /* specifying backgrount is none*/
+  outline: none;  /* specifying is none*/
+}
+
+ul { /* universal list */
+  list-style: none; /* specifying list style is none */
+}
+
+body { /* body */
+  padding: 50px; /* specifying padding */
+  background-image: url("../image/seanory.png"); /* specifying bacjground image */
+  background-repeat: no-repeat; /* specifying no repet backgrount image */
+  font: 1rem/1.3 "Roboto", sans-serif; /* specifying font*/
+  background: var(--darkbg);  /* specifying background (getting from root colers)*/
+  color: var(--darkfontcolor); /* specifying color (getting from root colors)*/
+  background-attachment: fixed; /* specifying backgrount attachment is fixed */
+  background-position: bottom; /* specifying the background position is bottuo*/
+}
+
+.topcontainer, .datacontainer {/* topcontainer class and datacontainer class */
+  width: 100%; /* specifying width */
+  max-width: 1200px; /* specifying maximum width */
+  margin: 0 auto; /* specifying margin */
+  padding: 0 15px; /* specifying padding */
+}
+
+.topcontend { /* topcontend class*/
+  color: var(--fontcolourwhite); /* specifying color (getting from root colers) */
+}
+
+.heading { /* heading class */
+  font-weight: bold; /* specifying font weight */
+  font-size: 4rem; /* specifying font size */
+  letter-spacing: 0.02em; /* specifying letter spacing */
+  padding: 0 0 30px 0; /* specifying padding */
+}
+
+.topcontend form { /* form inside topcontend class */
+  position: relative; /* specifying position */
+  display: flex; /* specifying display */
+  align-items: center; /* specifying align items */
+}
+
+.topcontend form input { /*selecting input from form from topcontend class */
+  font-size: 2rem; /* specifying font size */
+  border-bottom: 1px solid; /* specifying border bpttom*/
+  height: 40px; /* specifying height */
+  padding: 5px 5px 10px; /* specifying padding */
+}
+
+.topcontend form input::placeholder { /*specifying input::placeholder from form from topcontend class */
+  color: currentColor; /* specifying color */
+}
+
+.topcontend form button { /* selecting button from form inside of class topcontend */
+  font-size: 1rem; /* specifying font size */
+  font-weight: bold; /* specifying font weight */
+  background: var(--orange); /* specifying background from root colors */
+  transition: background 0.3s ease-in-out;  /* specifying transition*/
+  letter-spacing: 0.1em; /* specifying letter spacing */
+  padding: 15px 20px; /* specifying padding */
+  margin-left: 15px; /* specifying left margin */
+  border-radius: 5px; /* specifying border radius */
+}
+
+.topcontend form button:hover { /* specifying button:hover from form inside of class topcontend */
+  background: var(--green); /* specifying backgrount color from root colors */
+}
+
+.topcontend form .message { /* selecting message class inside of fore and topcontend class */
+  position: absolute; /* specifying position */
+  bottom: -40px; /* specifying bottom */
+  color: rgb(247, 163, 95); /* specifying color */
+  left: 0; /* specifying left */
+  max-width: 450px; /* specifying maximum width */
+  min-height: 40px; /* specifying minumum height */
+}
+
+.weathersection { /* weathersection class */
+  margin: 70px 0 20px; /* specifying margin */
+}
+
+.weathersection .cities { /* weathersection class and cities class */
+  display: grid; /* specifying display*/
+  grid-gap: 32px 20px; /* specifying grid gap*/
+  grid-template-columns: repeat(4, 1fr); /* specifying grid template columns */
+}
+
+.weathersection .city { /* weathersection class and city class */
+  position: relative; /* specifying position */
+  padding: 40px 10%; /* specifying padding */
+  border-radius: 20px; /* specifying border radius */
+  background: var(--fontcolourwhite); /* specifying backgrount color from root color */
+  color: var(--lightdarkfontcolor); /* specifying color from root colors*/
+}
+
+.weathersection .city::after { /* */
+  content: '';
+  width: 90%;
+  height: 50px;
+  position: absolute;
+  bottom: -12px;
+  left: 5%;
+  z-index: -1;
+  opacity: 0.3;
+  border-radius: 20px;
+  background: var(--fontcolourwhite);
+}
+
+.weathersection figcaption {
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.weathersection .city-temp {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: var(--darkfontcolor);
+}
+
+.weathersection .city sup {
+  font-size: 0.5em;
+}
+
+.weathersection .city-name sup {
+  padding: 0.2em 0.6em;
+  border-radius: 30px;
+  color: var(--fontcolourwhite);
+  background: var(--countrybg); 
+}
+
+.weathersection .city-icon {
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+
+/* FOOTER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.footer {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--fontcolourwhite);
+  margin-top: 40px;
+  color: #ffffff;
+}
+
+footer {
+  position: fixed; 
+  padding: 10px 10px 0px 10px; 
+  bottom: 0; 
+  width: 100%; 
+  /* Height of the footer*/  
+  height: 40px;
+}
+
+.heartSymbel {
+  color: rgb(238, 6, 6);
+  font-size: 16px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+
+/* MQ
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 1000px) {
+  body {
+    padding: 30px;
+  }
+  
+  .weathersection .cities {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .heading,
+  .weathersection .city-temp {
+    font-size: 3rem;
+  }
+  
+  .weathersection {
+    margin-top: 20px;
+  }
+  
+  .topcontend form {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .topcontend form input,
+  .topcontend form button {
+    width: 100%;
+  }
+
+  .topcontend form button {
+    margin: 20px 0 0 0;
+  }
+  
+  .topcontend form .msg {
+    position: static;
+    max-width: none;
+    min-height: 0;
+    margin-top: 10px;
+  }
+
+  .weathersection .cities {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    padding: 15px;
+  }
+  
+  .weathersection .cities {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
